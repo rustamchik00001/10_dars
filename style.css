@@ -312,172 +312,277 @@ i {
 
 /* ---------------------------------------------------------------------- */
 
-.element {
-  background-color: transparent;
-  display: grid;
-  justify-items: center;
-  align-items: start;
-  width: 100vw;
+.first_grid{
+  padding: 50px 0;
+  background-color: #eee;
 }
 
-.element .div {
-  background-image: url(https://c.animaapp.com/mepfwoiqCrUIyf/img/background.svg);
-  background-size: 100% 100%;
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 32px;
+}
+  
+.div1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+
+.div2 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+}
+
+.div3 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+}
+
+.div4 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 3;
+}
+
+.div5 {
+  grid-row-start: 3;
+}
+
+.div6 {
+  grid-row-start: 3;
+}
+
+.div7 {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.div8 {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+.card {
+  position: relative;
   width: 555px;
   height: 370px;
-  position: relative;
-}
-
-.element .div .text-wrapper {
-  position: absolute;
-  height: 15px;
-  top: 334px;
-  left: 499px;
-  font-family: "Lato", Helvetica;
-  font-weight: 400;
-  color: rgba(147, 150, 153, 1);
-  font-size: 12px;
-  line-height: 15px;
-  white-space: nowrap;
-  font-style: normal;
-}
-
-.element .div .icon-comment {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 335px;
-  left: 479px;
-}
-
-.element .div .even-as-the-ride-hai {
-  position: absolute;
-  height: 20px;
-  top: 331px;
-  left: 168px;
-  font-family: "Lato", Helvetica;
-  font-weight: 400;
-  color: rgba(75, 81, 87, 1);
-  font-size: 14px;
-  line-height: 20px;
-  white-space: nowrap;
-  font-style: normal;
-}
-
-.element .div .text-wrapper-2 {
-  position: absolute;
-  height: 20px;
-  top: 331px;
-  left: 75px;
-  font-family: "Lato", Helvetica;
-  font-weight: 400;
-  color: rgba(38, 45, 51, 1);
-  font-size: 14px;
-  line-height: 20px;
-  white-space: nowrap;
-  font-style: normal;
-}
-
-.element .div .avatar {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 327px;
-  left: 35px;
-  background-image: url(https://c.animaapp.com/mepfwoiqCrUIyf/img/image-189.png);
   background-size: cover;
-  background-position: 50% 50%;
 }
 
-.element .div .overlap {
+.card-top {
+  position: absolute;
   top: 28px;
-  position: absolute;
-  width: 555px;
-  height: 299px;
   left: 0;
+  width: auto;
+  height: auto;
 }
 
-.element .div .overlap .overlap-group {
+.tag {
+  position: absolute;
+  top: 6px;
+  left: 35px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(110, 153, 174);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.card-title {
+  position: absolute;
+  top: 41px;
+  left: 35px;
+  width: 238px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(38, 45, 51);
+  margin: 0;
+}
+
+.card-text {
+  position: absolute;
+  top: 156px;
+  left: 35px;
+  width: 228px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(75, 81, 87);
+  margin: 0;
+}
+
+.card-image {
+  position: absolute;
   top: 0;
-  position: absolute;
-  width: 555px;
+  left: 367px;
+  width: 292px;
   height: 299px;
-  left: 0;
+  background-size: cover;
 }
 
-.element .div .overlap .overlap-group .divider-horizontal {
+.card-line {
   position: absolute;
-  width: 555px;
+  width: 660px;
   height: 1px;
   top: 286px;
   left: 0;
-  background-color: rgba(217, 218, 219, 1);
+  background-color: rgb(217, 218, 219);
 }
 
-.element .div .overlap .overlap-group .image {
+.card-bottom {
   position: absolute;
-  width: 292px;
-  height: 299px;
-  top: 0;
-  left: 263px;
-  background-image: url(https://c.animaapp.com/mepfwoiqCrUIyf/img/image-188.png);
-  background-size: 100% 100%;
-}
-
-.element .div .overlap .overlap-group .the-joy-of-replicas {
-  position: absolute;
-  width: 238px;
-  height: 90px;
-  top: 41px;
+  bottom: 13px;
   left: 35px;
-  font-family: "Roboto Slab", Helvetica;
-  font-weight: 700;
-  color: rgba(38, 45, 51, 1);
-  font-size: 25px;
-  line-height: 30px;
-  font-style: normal;
+  right: 35px;
+  display: flex;
+  align-items: center;
 }
 
-.element .div .overlap .overlap-group .the-year-old-self {
-  position: absolute;
-  width: 228px;
-  height: 80px;
-  top: 156px;
-  left: 35px;
-  font-family: "Lato", Helvetica;
-  font-weight: 400;
-  color: rgba(75, 81, 87, 1);
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-pic {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.author-name {
   font-size: 14px;
-  line-height: 20px;
-  font-style: normal;
+  font-weight: 600;
+  color: rgb(38, 45, 51);
+  white-space: nowrap;
 }
 
-.element .div .overlap .overlap-group .cars {
-  position: absolute;
-  width: 228px;
-  height: 15px;
-  top: 6px;
-  left: 35px;
-  font-family: "Lato", Helvetica;
-  font-weight: 400;
-  color: rgba(110, 153, 174, 1);
+.author-desc {
+  font-size: 14px;
+  color: rgb(75, 81, 87);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  margin: 0;
+}
+
+.parent-div{
+  border-radius: 10px;
+  background-color: white;
+}
+/* ---------------------------------------------------------------------- */ 
+.div2{
+  padding: 16px;
+  background: url(./img/hand.png);
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.div2_btn{
+  width: 86px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  background: rgb(115, 230, 159);
+  font-weight: 900;
   font-size: 12px;
-  letter-spacing: 0.5px;
-  line-height: 15px;
-  font-style: normal;
+  line-height: 125%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 115px;
 }
 
+.div2 > h3{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #e7d9ff;
+  margin-bottom: 10px;
+}
 
+.div2 > h1{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 15px;
+}
 
+.div2 > div{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+} 
 
+.d2_b_r_top > h3{
+  opacity: 0.85;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #fff;
+}
 
+.d2_b_r_bottom{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
 
+.d2_b_r_bottom > p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  color: #fff;
+}
+/* ----------------------------------------------- */
 
+.div3{
+  border-radius: 10px;
+  background-color: #6e99ae;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.div3_title_h1 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 143%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
 
+.div3_h1{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 125%;
+  color: #fff;
+}
 
+.div3_bottom{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-
+.div3_bottom_p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 143%;
+  color: #d1e2eb;
+}
 
 
 
